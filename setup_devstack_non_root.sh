@@ -17,4 +17,4 @@ echo SERVICE_PASSWORD=password >> local.conf
 echo SERVICE_TOKEN=tokentoken >> local.conf
 ./stack.sh
 
-/vagrant/config-git.sh
+/vagrant/config_git.sh
