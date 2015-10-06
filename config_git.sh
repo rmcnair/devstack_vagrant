@@ -1,12 +1,6 @@
 #!/bin/bash
 
-# Update these variables to set up your git config
-EMAIL=""
-NAME=""
-# If you do not remember your Gerrit user name go to the settings page on
-# gerrit to check it out (it is not your email address).
-GERRIT_USERNAME=""
-DEFAULT_EDITOR=""
+source /vagrant/git_variables.sh
 
 if [[ ! -z $EMAIL ]]; then
     git config --global --replace-all user.email "$EMAIL"
@@ -22,5 +16,5 @@ fi
 
 if [[ ! -z $DEFAULT_EDITOR ]]; then
     # Optional, I just prefer vim for commit messages
-    git config --global --replace-all core.editor vim
+    git config --global --replace-all core.editor "$DEFAULT_EDITOR"
 fi
