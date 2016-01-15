@@ -15,6 +15,10 @@ echo "deb http://archive.getdeb.net/ubuntu trusty-getdeb apps" >> /etc/apt/sourc
 apt-get update
 apt-get install -y --force-yes pycharm
 
+for file in `ls /vagrant/*sh`; do
+  chmod +x $file
+done
+
 # In order to make devstack and everyone happy, we need to
 # run the rest of the setup as a non-root user
 su -c "/vagrant/setup_devstack_non_root.sh" vagrant
