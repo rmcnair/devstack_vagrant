@@ -5,9 +5,15 @@ apt-get -qqy update || yum update -qy
 apt-get install -qqy git || yum install -qy git
 
 # Some packages I find useful my development, feel free to update
+apt-get update
+apt-get upgrade -y
+apt-get dist-upgrade -y
 apt-get install -y dos2unix
 apt-get install -y pep8
 apt-get install -y vim
+apt-get install -y build-essential
+apt-get install -y module-assistant
+apt-get autoremove -y
 
 # Install python
 wget -q -O - http://archive.getdeb.net/getdeb-archive.key
