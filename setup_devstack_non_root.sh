@@ -25,6 +25,22 @@ MYSQL_PASSWORD=$pass
 RABBIT_PASSWORD=$pass
 SERVICE_PASSWORD=$pass
 SERVICE_TOKEN=$token
+disable_service n-net
+ENABLED_SERVICES+=,heat,h-api,h-api-cfn,h-api-cw,h-eng 
+disable_service n-net
+enable_service q-svc
+enable_service q-agt
+enable_service q-dhcp
+enable_service q-l3
+enable_service q-meta
+enable_service q-metering
+enable_service neutron
+enable_service q-lbaas
+enable_service q-fwaas
+enable_service q-vpn
+enable_service ceilometer-acompute ceilometer-acentral ceilometer-anotification ceilometer-collector ceilometer-api
+enable_plugin trove git://git.openstack.org/openstack/trove
+RECLONE=yes
 EOL
 
 ./stack.sh
