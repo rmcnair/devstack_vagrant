@@ -13,6 +13,7 @@ apt-get install -y pep8
 apt-get install -y vim
 apt-get install -y build-essential
 apt-get install -y module-assistant
+apt-get install -y core-network-daemon
 apt-get autoremove -y
 
 # Install python
